@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List of Fruits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        let allFruits=["Apple","Banana","Orange"];
+
+        let mappedAllFruits=allFruits.map((fruit)=>fruit.toLowerCase());
+
+
+        let content=`<ul>`;
+        for(let eachFruit of mappedAllFruits){
+            content+=`<li class='list-group-item'>${eachFruit}</li>`;
+        }
+        content +=`</ul>`;
+       
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>
+            List of fruits
+        </h2>
+        <div id="show">
+            
+        </div>
+        <script>
+            document.getElementById("show").innerHTML=content;
+        </script>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
